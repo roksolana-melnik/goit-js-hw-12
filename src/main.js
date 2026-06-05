@@ -56,6 +56,7 @@ form.addEventListener('submit', async e => {
 });
 
 loadMoreBtn.addEventListener('click', async () => {
+  if (!currentQuery) return;
   currentPage += 1;
   hideLoadMoreButton();
   showLoader();
